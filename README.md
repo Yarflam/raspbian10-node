@@ -9,3 +9,7 @@ You can download the [image](https://hub.docker.com/repository/docker/yarflam/ra
 And start a container:
 
 > $ docker run --name node -it yarflam/raspbian10-node
+
+## Authors
+
+- Yarflam - *maintainer*
