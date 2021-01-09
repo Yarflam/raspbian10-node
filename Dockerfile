@@ -4,12 +4,12 @@ MAINTAINER Yarflam
 # Prepare
 RUN apt-get update &&\
     apt-get upgrade -y &&\
-    apt-get install wget tar
+    apt-get install -y wget tar libatomic1
 
 # Install Node.js
-ENV NODE_VERSION=12.15.0
+ENV NODE_VERSION=14.15.4
 ENV NODE_PLATFORM=armv7l
-RUN wget https://nodejs.org/dist/v12.15.0/node-v$NODE_VERSION-linux-$NODE_PLATFORM.tar.xz &&\
+RUN wget https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$NODE_PLATFORM.tar.xz &&\
     tar xf node-v$NODE_VERSION-linux-$NODE_PLATFORM.tar.xz &&\
     mv ./node-v$NODE_VERSION-linux-$NODE_PLATFORM /opt/node &&\
     rm -f ./node-v$NODE_VERSION-linux-$NODE_PLATFORM.tar.xz
